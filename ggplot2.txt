@@ -1,0 +1,8 @@
+library(ggplot2)
+
+# visualize all features with count
+for(i in 1:ncol(train2))
+{
+  p = ggplot(train2,aes_string(x=colnames(train2[i]))) + geom_bar(stat = "count")
+  print(p)
+}
